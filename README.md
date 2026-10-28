@@ -46,10 +46,10 @@ for file in files:
     datasets[file] = pd.read_csv(file)
     print(f"\n{file}")
     print(datasets[file].head())
+```
 
 <img width="590" height="520" alt="image" src="https://github.com/user-attachments/assets/a83d0441-8065-4d92-8663-7e192e5e990b" />
 
-```
 Explore the datasets
 
 ```
@@ -67,13 +67,13 @@ for name, df in datasets.items():
 
     print("\nStatistical summary:")
     display(df.describe(include="all"))
+```
 
 <img width="341" height="504" alt="image" src="https://github.com/user-attachments/assets/a9d1d40c-21e3-4299-85f9-e0dff97fab33" />
 <img width="351" height="559" alt="image" src="https://github.com/user-attachments/assets/e493c6a1-d366-47ae-bb13-51853b9a8af2" />
 <img width="404" height="387" alt="image" src="https://github.com/user-attachments/assets/ea2273ef-9053-4e58-b5f7-8e982cb2edf9" />
 <img width="440" height="440" alt="image" src="https://github.com/user-attachments/assets/07290f78-e42f-4533-9dc3-7b0ffc1e9b01" />
 
-```
 Perform data cleaning
 ```
 cleaned_datasets = {}
@@ -114,11 +114,15 @@ for name, df in datasets.items():
 
     print(name, "cleaned shape:", df.shape)
 
-<img width="287" height="84" alt="image" src="https://github.com/user-attachments/assets/4621710c-d01b-4c2d-891e-08f7db418f6d" />
 ```
 
+<img width="287" height="84" alt="image" src="https://github.com/user-attachments/assets/4621710c-d01b-4c2d-891e-08f7db418f6d" />
+
+
 Detect outliers using the IQR method
-```outlier_reports = {}
+
+```
+outlier_reports = {}
 
 for name, df in cleaned_datasets.items():
 
@@ -160,9 +164,10 @@ for name, df in cleaned_datasets.items():
 
     print("\nOutlier report:", name)
     display(outlier_reports[name])
+```
 
 <img width="389" height="463" alt="image" src="https://github.com/user-attachments/assets/f36fa5fb-8977-4041-82fe-3ad797838e3b" />
-```
+
 
 Visualize outliers using boxplots
 ```
@@ -187,13 +192,13 @@ for name, df in cleaned_datasets.items():
     plt.suptitle(f"Outlier Detection: {name}")
     plt.tight_layout()
     plt.show()
-
+```
 <img width="483" height="380" alt="image" src="https://github.com/user-attachments/assets/147b7275-0d52-4c73-944e-47aacb1c1084" />
 <img width="436" height="185" alt="image" src="https://github.com/user-attachments/assets/9e8e2114-5982-409e-ae5e-665172f2d7ae" />
 <img width="482" height="301" alt="image" src="https://github.com/user-attachments/assets/3a173a14-e187-480a-8156-d4fc6139c9ac" />
 <img width="278" height="319" alt="image" src="https://github.com/user-attachments/assets/b21f05db-bf28-48bc-bce7-a445c1b32140" />
 <img width="338" height="439" alt="image" src="https://github.com/user-attachments/assets/d27e852a-7479-4fe2-9a6f-1aaa80177844" />
-```
+
 Remove outliers
 ```
 outlier_free_datasets = {}
@@ -232,10 +237,10 @@ for name, df in cleaned_datasets.items():
     print("Rows before removal:", len(df))
     print("Rows after removal:", len(result))
     print("Rows removed:", len(df) - len(result))
+```
 
 <img width="208" height="248" alt="image" src="https://github.com/user-attachments/assets/178b6ba8-524c-4ec6-85c2-fc3ead1acf1d" />
 
-```
 Save the cleaned datasets and reports
 ```
 os.makedirs("cleaned_data", exist_ok=True)
@@ -262,10 +267,10 @@ if report_list:
     display(final_report)
 
 print("All available cleaned datasets and reports have been saved.")
+```
 
 <img width="533" height="375" alt="image" src="https://github.com/user-attachments/assets/37544f8c-856f-43fd-8f0e-910e37d48597" />
 
-```
            
 # Result
 
