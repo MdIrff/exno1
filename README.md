@@ -271,6 +271,17 @@ print("All available cleaned datasets and reports have been saved.")
 
 <img width="533" height="375" alt="image" src="https://github.com/user-attachments/assets/37544f8c-856f-43fd-8f0e-910e37d48597" />
 
+#Summary
+
+In this project, I cleaned five datasets (Data_set, heights, iris, Loan_data and SAMPLEIDS) using Python and pandas.
+
+First, I loaded each dataset and checked its size, data types, missing values and duplicates. Then I cleaned the data by removing duplicate rows and empty columns, and filling missing values: numbers with the median and text with the most frequent value (mode).
+
+Next, I found outliers using the IQR method, which flags values that fall far outside the middle range of the data. I showed them using boxplots and then removed the rows containing outliers.
+
+Finally, I saved the cleaned datasets and an outlier report as CSV files.
+
+
            
 # Result
 
