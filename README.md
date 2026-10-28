@@ -272,6 +272,7 @@ print("All available cleaned datasets and reports have been saved.")
 <img width="533" height="375" alt="image" src="https://github.com/user-attachments/assets/37544f8c-856f-43fd-8f0e-910e37d48597" />
 
 
+
 Summary
 
 In this project, I cleaned five datasets (Data_set, heights, iris, Loan_data and SAMPLEIDS) using Python and pandas.
